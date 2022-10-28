@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        *:focus{
+            outline-color: #3777aa;
+            outline-offset: 2px;
+            transition: 0.3s linear;
+        }
+
+        *,::after,::before{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none;
+        }
+        .wrapper{
+            max-width: 1250px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+/* navbar */
+        .navbar-container{
+            width: 100%;
+          min-height: 50px;
+            background-color: rgb(183, 199, 221);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .logo-section{
+            width: 70px;
+        }
+        .hamburger{
+            width: 25px;
+            justify-self: flex-end;
+        }
+        .nav-links-main{
+            display: none ;
+        }
+        .nav-social-links-main  img{
+            width: 30px;
+            display: none;
+        }
+        .navbar-center{
+            width: 100%;
+            height: 100%;
+          
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-content: center;
+        }
+ 
+        @media screen and (min-width: 992px) {
+            .navbar-container{
+                min-height: 70px;
+            }
+            .navbar-center{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+            }
+
+            .hamburger{
+                display: none;
+            }
+            .nav-links-main{
+                display: flex;
+                justify-content: center;
+            }
+            .nav-links-main .nav-links{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 40px;
+            }
+            .nav-links-main  .nav-link{
+                font-size: 16px;
+                color: black;
+                font-weight: bold;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                border-radius: 4px;
+                transition: 0.3s linear;
+                padding: 5px 10px;
+            }
+            .nav-links .active,.nav-links .nav-link:hover{
+                color:white;
+                background-color: rgb(10, 10, 10);
+
+
+            }
+            .nav-social-links-main  img{
+                display: flex;
+                
+            }
+             .nav-social-links{
+                display: flex;
+                column-gap: 10px;
+                justify-content: flex-end;
+                align-items: center;
+             }
+
+             .nav-social-links .nav-social-link img{
+                width: 30px;
+                height: 30px;
+                border: 2px solid rgb(15, 14, 14);
+                border-radius: 11px;
+                padding: 5px 5px;
+                transition: 0.3s linear;
+
+             }
+             .nav-social-links .nav-social-link :hover{
+                transform: translateY(-4px);
+             }
+
+
+
+
+
+        }
+       
+    </style>
+</head>
+<body >
+    <nav class="navbar-container">
+        <div class="navbar-center wrapper">
+            <div class="logo-section">
+                <a href="#">
+                    <img src="./icons/logo-cap.svg" alt="logo-cap">
+                </a>
+            </div>
+            <div class="hamburger">
+                <a href="#"><img src="./icons/bars.svg" alt="hamburger"></a>
+            </div>
+            <div class="nav-links-main">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active">home</a></li>
+                    <li><a href="#" class="nav-link">about</a></li>
+                    <li><a href="#" class="nav-link">project</a></li>
+                    <li><a href="#" class="nav-link">contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-social-links-main">
+                <ul class="nav-social-links">
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/linkedin.svg" alt="linkedin">
+                        </a>
+                    </li>
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/instagram.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/youtube.svg" alt="youtube">
+                        </a>
+                    </li>
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/github.svg" alt="github">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>

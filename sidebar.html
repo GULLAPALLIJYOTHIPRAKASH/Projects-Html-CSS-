@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+    <style>
+        
+        *,::after,::before{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        a{
+            text-decoration: none;
+        }
+        ul{
+            list-style-type: none;
+        }
+
+        .wrapper{
+            max-width: 1250px;
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .wrapper-1{
+            
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+/* navbar style */
+.navbar-container{
+            width: 100%;
+          min-height: 50px;
+            background-color: rgb(183, 199, 221);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+        .logo-section{
+            width: 70px;
+        }
+        .hamburger{
+            width: 25px;
+            justify-self: flex-end;
+        }
+        .nav-links-main{
+            display: none ;
+        }
+        .nav-social-links-main  img{
+            width: 30px;
+            display: none;
+        }
+        .navbar-center{
+            width: 100%;
+            height: 100%;
+          
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            align-items: center;
+            justify-content: center;
+        }
+ 
+        @media screen and (min-width: 992px) {
+            .navbar-container{
+                min-height: 70px;
+            }
+            .navbar-center{
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+            }
+
+            .hamburger{
+                display: none;
+            }
+            .nav-links-main{
+                display: flex;
+                justify-content: center;
+            }
+            .nav-links-main .nav-links{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                column-gap: 40px;
+            }
+            .nav-links-main  .nav-link{
+                font-size: 16px;
+                color: black;
+                font-weight: bold;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+                border-radius: 4px;
+                transition: 0.3s linear;
+                padding: 5px 10px;
+            }
+            .nav-links .active,.nav-links .nav-link:hover{
+                color:white;
+                background-color: rgb(10, 10, 10);
+
+
+            }
+            .nav-social-links-main  img{
+                display: flex;
+                
+            }
+             .nav-social-links{
+                display: flex;
+                column-gap: 10px;
+                justify-content: flex-end;
+                align-items: center;
+             }
+
+             .nav-social-links .nav-social-link img{
+                width: 30px;
+                height: 30px;
+                border: 2px solid rgb(15, 14, 14);
+                border-radius: 11px;
+                padding: 5px 5px;
+                transition: 0.3s linear;
+
+             }
+             .nav-social-links .nav-social-link :hover{
+                transform: translateY(-4px);
+             }
+
+
+
+
+
+        }
+/* padding classes */
+@media screen and (max-width: 991px) {
+  .paddingTopMobile-ten {
+    padding-top: 10px !important;
+  }
+  .paddingTopMobile-twenty {
+    padding-top: 20px !important;
+  }
+  .paddingTopMobile-thirty {
+    padding-top: 30px !important;
+  }
+  .paddingTopMobile-forty {
+    padding-top: 40px !important;
+  }
+  .paddingTopMobile-fifty {
+    padding-top: 50px !important;
+  }
+  .paddingBottomMobile-ten {
+    padding-bottom: 10px !important;
+  }
+  .paddingBottomMobile-twenty {
+    padding-bottom: 20px !important;
+  }
+  .paddingBottomMobile-thirty {
+    padding-bottom: 30px !important;
+  }
+  .paddingBottomMobile-forty {
+    padding-bottom: 40px !important;
+  }
+  .paddingBottomMobile-fifty {
+    padding-bottom: 50px !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  .paddingTopDesktop-ten {
+    padding-top: 10px !important;
+  }
+  .paddingTopDesktop-twenty {
+    padding-top: 20px !important;
+  }
+  .paddingTopDesktop-thirty {
+    padding-top: 30px !important;
+  }
+  .paddingTopDesktop-forty {
+    padding-top: 40px !important;
+  }
+  .paddingTopDesktop-fifty {
+    padding-top: 50px !important;
+  }
+  .paddingTopDesktop-sixty {
+    padding-top: 60px !important;
+  }
+  .paddingTopDesktop-seventy {
+    padding-top: 70px !important;
+  }
+  .paddingTopDesktop-eighty {
+    padding-top: 80px !important;
+  }
+  .paddingTopDesktop-ninety {
+    padding-top: 90px !important;
+  }
+  .paddingTopDesktop-hundred {
+    padding-top: 100px !important;
+  }
+  .paddingBottomDesktop-ten {
+    padding-bottom: 10px !important;
+  }
+  .paddingBottomDesktop-twenty {
+    padding-bottom: 20px !important;
+  }
+  .paddingBottomDesktop-thirty {
+    padding-bottom: 30px !important;
+  }
+  .paddingBottomDesktop-forty {
+    padding-bottom: 40px !important;
+  }
+  .paddingBottomDesktop-fifty {
+    padding-bottom: 50px !important;
+  }
+  .paddingBottomDesktop-sixty {
+    padding-bottom: 60px !important;
+  }
+  .paddingBottomDesktop-seventy {
+    padding-bottom: 70px !important;
+  }
+  .paddingBottomDesktop-eighty {
+    padding-bottom: 80px !important;
+  }
+  .paddingBottomDesktop-ninety {
+    padding-bottom: 90px !important;
+  }
+  .paddingBottomDesktop-hundred {
+    padding-bottom: 100px !important;
+  }
+}
+
+
+.sidebar-container{
+    max-width: 100%;
+    min-height: 100vh;
+    background-color:rgb(158, 217, 239) ;
+    position: fixed;
+    top: 0;
+    left:0;
+    overflow-Y: scroll;
+
+    
+}
+
+.close-section{
+    width: 25px;
+}
+.sidebar-header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid red;
+    padding-left: 10px;
+    padding-right:10px ;
+}
+/*.sidebar-container .img-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.sidebar-container .img-container img{
+    width: 200px;
+    height:200px;
+    border-radius: 50%;
+}*/
+
+.sidebar-container .sidenav-links-main{
+    display: flex;
+   justify-content: center;
+}
+
+.sidebar-container .sidenav-links{
+    display: flex;
+    flex-direction: column;
+    row-gap:30px ;
+}
+.sidebar-container .sidenav-link{
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 10px 20px;
+    border-radius: 11px;
+    transition: 0.3s linear;
+}
+.sidebar-container .active,.sidebar-container .sidenav-link:hover{
+    background-color: black;
+    color: white;
+
+}
+.sidenav-social-links-main .sidenav-social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 20px;
+}
+.sidenav-social-links-main .sidenav-social-link img{
+    width: 30px;
+    height: 30px;
+    padding: 5px 5px;
+    border: 2px solid white;
+    border-radius: 11px;
+    transition: 0.3s linear;
+}
+.sidenav-social-links-main .sidenav-social-link img:hover{
+    transform: translateY(-4px);
+    border-color: black;
+    
+}
+@media screen and (min-width: 992px) {
+    .sidebar-container{
+  display: none;
+
+    
+}
+       
+
+    
+}
+
+
+    </style>
+</head>
+<body>
+
+    <!--nav bar start-->
+    <nav class="navbar-container">
+        <div class="navbar-center wrapper">
+            <div class="logo-section">
+                <a href="#">
+                    <img src="./icons/logo-cap.svg" alt="logo-cap">
+                </a>
+            </div>
+            <div class="hamburger">
+                <a href="#"><img src="./icons/bars.svg" alt="hamburger"></a>
+            </div>
+            <div class="nav-links-main">
+                <ul class="nav-links">
+                    <li><a href="#" class="nav-link active">home</a></li>
+                    <li><a href="#" class="nav-link">about</a></li>
+                    <li><a href="#" class="nav-link">project</a></li>
+                    <li><a href="#" class="nav-link">contact</a></li>
+                </ul>
+            </div>
+            <div class="nav-social-links-main">
+                <ul class="nav-social-links">
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/linkedin.svg" alt="linkedin">
+                        </a>
+                    </li>
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/instagram.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/youtube.svg" alt="youtube">
+                        </a>
+                    </li>
+                    <li class="nav-social-link">
+                        <a href="#">
+                            <img src="./icons/github.svg" alt="github">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--navbar end-->
+    <!--sidebar start-->
+    <aside class="sidebar-container">
+        <div class="sidebar-center  wrapper-1">
+            <div class="sidebar-header ">
+                <div class="logo-section">
+                    <a href="#">
+                        <img src="./icons/logo-cap.svg" alt="logo-cap">
+                    </a>
+                </div>
+                <div class="close-section">
+                    <a href="#">
+                        <img src="./icons/close-1.svg" alt="close">
+                    </a>
+                </div>
+
+            </div>
+     <!---       <div class="img-component">
+                <div class="img-container">
+                    <img src="./assets/human-1.jpg" alt="human-1">
+                </div>
+            </div>-->
+           
+            <div class="sidenav-links-main paddingTopDesktop-sixty paddingTopMobile-fifty">
+                <ul class="sidenav-links">
+                    <li><a href="#" class="sidenav-link active">Home</a></li>
+                    <li><a href="#" class="sidenav-link">About</a></li>
+                    <li><a href="#" class="sidenav-link">Course</a></li>
+                    <li><a href="#" class="sidenav-link">Contact</a></li>
+                </ul>
+            </div>
+            <div class="sidenav-social-links-main paddingTopDesktop-thirty paddingTopMobile-thirty">
+                <ul class="sidenav-social-links">
+                    <li class="sidenav-social-link">
+                        <a href="#">
+                            <img src="./icons/linkedin-dark.svg" alt="linkedin">
+                        </a>
+                    </li>
+                    <li class="sidenav-social-link">
+                        <a href="#">
+                            <img src="./icons/instagram-dark.svg" alt="instagram">
+                        </a>
+                    </li>
+                    <li class="sidenav-social-link">
+                        <a href="#">
+                            <img src="./icons/youtube-dark.svg" alt="youtube">
+                        </a>
+                    </li>
+                    <li class="sidenav-social-link">
+                        <a href="#">
+                            <img src="./icons/github-dark.svg" alt="github">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <!--sidebar end-->
+</body>
+</html>

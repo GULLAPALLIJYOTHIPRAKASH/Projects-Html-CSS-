@@ -206,6 +206,50 @@
         
       }
 
+/*  */
+       /* small-crirle loader */
+
+       .small-circle{
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border:1px solid transparent;
+        border-radius: 50%;
+        background-color:#3777aa;
+        animation-name: mover;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+       
+
+          }
+
+        
+        
+        
+        
+
+
+       @keyframes mover {
+        0%{
+            transform: translateX(0px);
+           
+        }
+
+    
+        
+        100%{
+          
+            
+            transform: translateX(1200px);
+            
+
+        }
+        
+       }
+
+       
+
     </style>
 </head>
 <body>
@@ -227,6 +271,14 @@
     <h1 class="header">loader-filler</h1>
     <div class="loader-filler"></div>
     <!--circle loader filler end  -->
+
+
+    <!-- small circle loader start -->
+    <h1 class="header">small circle loader-filler</h1>
+    <div class="small-circle mover_1"></div>
+    <div class="small-circle"></div>
+    <div class="small-circle"></div>
+    <!-- small circle loader end -->
 
 
         <!--rectangle loader  start  -->

@@ -150,31 +150,34 @@
     letter-spacing: 1px;
     text-align: center;
     margin-bottom: 12px;
+    animation-name:zero-rotate ;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes  zero-rotate {
+
+0%{
+    color:blue;
+}
+
+100%{
+   
+    color: red;
+}
 }
 .ice-cream-count .ice-cream-number{
     color: rgb(26, 51, 67);
     font-size: 90px;
     text-align: center;
     margin-bottom: 12px;
-    animation-name:zero-rotate ;
-    animation-duration: 3s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
     
 }
 
-@keyframes  zero-rotate {
 
-    0%{
-        color:blue;
-    }
-
-    100%{
-       
-        color: red;
-    }
     
-}
+
 .ice-cream-button-container{
         text-align: center;
     }
@@ -218,21 +221,127 @@
     </style>
 </head>
 <body>
-    <div class="ice-cream-counter-container ">
-        <div class="ice-cream-center wrapper paddingTopDesktop-fifty paddingTopMobile-fifty ">
-            <div class="section-title ">
-                <h1 class="title">ice cream count</h1>
-            </div>
-            <div class="ice-cream-count ">
-                <h1 class="ice-cream-number">0</h1>
-            </div>
-            <div class="ice-cream-button-container">
-                <button class="ice-cream-button">decrease</button>
-                <button class="ice-cream-button">reset</button>
-                <button class="ice-cream-button">increase</button>
-            </div>
-        </div>
+  <!-- ice cream counter start -->
+  <div class="ice-cream-counter-container ">
+    <div class="ice-cream-center wrapper paddingTopDesktop-fifty paddingTopMobile-fifty ">
+      <div class="section-title ">
+        <h1 class="title">ice cream count</h1>
+      </div>
+      <div class="ice-cream-count ">
+        <h1 class="ice-cream-number" id="counter_no">0</h1>
+      </div>
+      <div class="ice-cream-button-container">
+        <button class="ice-cream-button" id="increase_btn">increase</button>
+        <button class="ice-cream-button" id="reset_btn">reset</button>
+        <button class="ice-cream-button" id="decrease_btn">decrease</button>
+      </div>
     </div>
+  </div>
+  <!-- ice cream counter end -->
+
+  <script>
+    // ice cream counter script
+
+  
+  function ice_cream_counter(){
+
+    //  heading h1 tag  inside content
+    let counter_number=document.getElementById("counter_no");
+
+
+  //   button increase-btn,decrease-btn,reset-btn
+
+    let increase_btn1=document.getElementById("increase_btn"); 
+    let decrease_btn2=document.getElementById("decrease_btn");
+    let reset_btn3=document.getElementById("reset_btn");
+
     
+    //  add event to button
+    increase_btn1.onclick=increase_count;
+    decrease_btn2.onclick=decrease_count;
+    reset_btn3.onclick=reset_count;
+
+
+// intial count=0;
+let count=0;
+
+
+// increase_btn
+function increase_count(){
+
+   
+count=count+1;
+
+// color change depend on condition
+if(count>0){
+  counter_number.style.color="green"
+}
+else if(count<0){
+  counter_number.style.color="red"
+}
+else{
+  counter_number.style.color="rgb(26, 51, 67)"
+
+}
+
+// console.log(count); 
+counter_number.innerText=count
+}
+
+
+
+
+
+// decrease_btn
+function decrease_count(){
+
+
+count=count-1;
+// color change depend on condition
+if(count>0){
+  counter_number.style.color="green"
+}
+else if(count<0){
+  counter_number.style.color="red"
+}
+else{
+  counter_number.style.color="rgb(26, 51, 67)"
+
+}
+console.log(count)
+counter_number.innerText=count
+}
+
+
+
+// reset_btn
+function reset_count(){
+counter_number.style.color="rgb(26, 51, 67)"
+count=0;
+console.log(count)
+counter_number.innerText=count
+}
+
+}
+
+
+
+// called main function
+
+
+ice_cream_counter()
+
+
+
+
+
+
+    
+
+
+    
+    
+  </script>
+  
 </body>
 </html>

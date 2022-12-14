@@ -265,14 +265,8 @@
 // intial count=0;
 let count=0;
 
-
-// increase_btn
-function increase_count(){
-
-   
-count=count+1;
-
 // color change depend on condition
+function color_condition(){
 if(count>0){
   counter_number.style.color="green"
 }
@@ -283,6 +277,17 @@ else{
   counter_number.style.color="rgb(26, 51, 67)"
 
 }
+}
+
+// increase_btn
+function increase_count(){
+
+   
+count=count+1;
+
+// color change depend on condition function
+color_condition();
+
 
 // console.log(count); 
 counter_number.innerText=count
@@ -297,17 +302,9 @@ function decrease_count(){
 
 
 count=count-1;
-// color change depend on condition
-if(count>0){
-  counter_number.style.color="green"
-}
-else if(count<0){
-  counter_number.style.color="red"
-}
-else{
-  counter_number.style.color="rgb(26, 51, 67)"
+// color change depend on condition function
+color_condition();
 
-}
 // console.log(count)
 counter_number.innerText=count
 }
